@@ -1,0 +1,323 @@
+:root {
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* Gfont */
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.pt-2 {
+  margin-top: 7px;
+}
+
+.pt-3 {
+  margin-top: 15px;
+}
+
+.pt-4 {
+  margin-top: 60px;
+}
+.pt-5 {
+  margin-top: 90px;
+}
+
+/* LANDING BG NAV-HOME */
+.landing-bg {
+  position: relative;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+.landing-bg::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: -20px;
+  right: -20px;
+  filter: blur(70px);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .landing-bg {
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.landing-bg .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 29%;
+}
+
+.landing-bg .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 100px 40px;
+}
+
+/* NAVBAR ID */
+@media (min-width: 992px) {
+  /* Desktop: tampilkan nav di tengah */
+  .mobile-dropdown {
+    display: none !important;
+  }
+
+  .desktop-nav {
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .desktop-nav ul {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+  }
+}
+
+.nav-pill-bg {
+  background-color: rgba(255, 255, 221, 0.3); /* atau bisa solid: #222 */
+  color: white;
+}
+
+@media (max-width: 991.98px) {
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+.mobileMenuToggle {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(70px);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0 0 0 0.1);
+}
+.mobile-nav-menu {
+  background-color: rgba(255, 255, 255, 0.95); /* putih tapi solid */
+  backdrop-filter: blur(20px); /* blur latar */
+  z-index: 1050;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* opsional, biar ada depth */
+}
+
+.mobile-nav-menu ul li a {
+  color: #111; /* warna teks */
+  background-color: transparent;
+  transition: all 0.2s ease;
+  border-radius: 10px; /* biar agak bulat */
+}
+
+/* HOME ID */
+.landing-bg #Home h1,
+.landing-bg #Home p {
+  text-shadow: var(--shadow);
+}
+
+#Home .h1,
+.p {
+  line-height: 1.8;
+}
+
+/* Ikon */
+.svg-icon-link {
+  color: #ffffff; /* warna awal ikon, bisa lo ganti */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.svg-icon-link:hover {
+  color: #f0f0f0ff; /* warna saat hover (misal: kuning/oranye) */
+  transform: scale(1.2); /* efek zoom dikit */
+}
+
+/* ABOUT ID */
+.about-img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+}
+@media (max-width: 768px) {
+  .about-img {
+    width: 75vw;
+    height: 75vw;
+    max-width: 250px; /* batas maksimal */
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+.popup-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: none;
+  width: 90%;
+  max-width: 450px;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  display: none;
+}
+
+.popup-icon {
+  font-size: 2rem;
+  color: #0d6efd; /* Bootstrap primary */
+}
+
+/* EXPERIENCE ID */
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #e0e0e0;
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+/* Skala adaptif */
+@media (max-width: 992px) {
+  .experience-item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-item {
+    width: 75%; /* Mobile ngambil 75% dari versi desktop */
+  }
+
+  .experience-item .row {
+    flex-direction: column;
+  }
+
+  .image-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* PORTFOLIO ID*/
+/* Button About */
+.custom-btn {
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.custom-btn i {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.custom-btn:hover i {
+  color: black;
+}
+
+.btn-about {
+  border-radius: 30px;
+}
+.btn-custom-height-width {
+  height: 25px;
+  width: 195px;
+  line-height: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.custom-btn {
+  margin-top: 175px;
+}
+/* Buat mobile, kecilin margin */
+@media (max-width: 767.98px) {
+  .custom-btn {
+    margin-top: 20px;
+  }
+}
+
+/* Efek Gambar */
+.zoom-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom-img {
+  transform: scale(1.1); /* Zoom in awal */
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+.zoom-img-wrapper:hover .zoom-img,
+.zoom-img-wrapper:has(:focus-visible) .zoom-img {
+  transform: scale(1); /* Zoom out saat hover */
+}
+
+.img-link img {
+  transition: transform 0.3s ease;
+}
+
+.img-link:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ID CARD-HTML */
+
+/* CONTACT */
+.contact-hover {
+  transition: transform 0.3s ease;
+}
+
+.contact-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer-light * {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}

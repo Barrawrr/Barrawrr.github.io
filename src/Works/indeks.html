@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects</title>
+    <!-- bootstrap css cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <!-- bootstrap icon cdn link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- css sendiri -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Nav starts -->
+    <nav id="navbar-top" class="navbar navbar-expand-lg shadow-sm pt-3">
+      <div class="container d-flex align-items-center justify-content-between px-4 px-md-5 py-4" style="height: 40px">
+        <!-- MOBILE -->
+        <div class="d-lg-none ms-auto">
+          <button class="btn btn-outline-secondary" id="mobileMenuToggle">Menu <i class="bi bi-caret-down-fill ms-1"></i></button>
+          <div class="mobile-nav-overlay d-none">
+            <div class="mobile-nav-menu w-100 mx-auto px-4 py-4 rounded-5 shadow position-fixed top-50 start-50 translate-middle text-start" style="z-index: 1050; max-width: 90%; width: 100%">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <strong class="text-muted">Navigation</strong>
+                <button id="closeMobileNav" class="btn btn-sm">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <ul class="list-unstyled">
+                <li><a class="d-block py-2 px-2 text-decoration-none border-bottom" href="/src/index.html">Home</a></li>
+                <li><a class="d-block py-2 px-2 text-decoration-none border-bottom" href="/src/About">About</a></li>
+                <li><a class="d-block py-2 px-2 text-decoration-none border-bottom" href="/src/Works/indeks.html">Work</a></li>
+                <li><a class="d-block py-2 px-2 text-decoration-none border-bottom" href="#">Experience</a></li>
+                <li><a class="d-block py-2 px-2 text-decoration-none border-bottom" href="/src/Contact">Contact</a></li>
+              </ul>
+            </div>
+            <!-- Backdrop -->
+            <div class="mobile-nav-backdrop position-fixed top-0 start-0 w-100 h-100 bg-opacity-25 backdrop-blur" style="z-index: 1040"></div>
+          </div>
+        </div>
+
+        <!-- DESKTOP-->
+        <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
+          <div class="px-4 py-2 rounded-pill shadow-sm">
+            <ul class="navbar-nav gap-3" style="font-size: 0.9rem">
+              <li class="nav-item"><a class="nav-link" href="/src/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/src/About">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/src/Works/indeks.html">Work</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Experience</a></li>
+              <li class="nav-item"><a class="nav-link" href="/src/Contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav Ends -->
+
+    <!-- Portfolio -->
+    <section id="works">
+      <div class="container pt-3 px-5">
+        <h2 class="text-start">Selected works</h2>
+        <!-- Portfol-1 -->
+        <hr class="border-secondary mb-5" />
+        <div class="row align-items-center">
+          <div class="col-md-8 order-1 order-md-2 mb-4 mb-md-0">
+            <div class="ratio ratio-4x3 overflow-hidden zoom-img-wrapper">
+              <img src="/src/img/Portfolio-1/prev-1.jpg" alt="ID Card Project" class="img-fluid rounded-2 object-fit-cover w-100 h-100 zoom-img" />
+            </div>
+          </div>
+
+          <div class="col-md-4 order-2 order-md-1">
+            <h2 class="text-start">ID Card</h2>
+            <h6 class="text-start">A student ID card design project from school</h6>
+            <p class="text-muted">08 Jan 2024</p>
+            <a href="/src/Works/id-card.html" class="btn btn-outline-light rounded-5 px-4 d-inline-flex align-items-center gap-2 custom-btn"> ABOUT PROJECT <i class="bi bi-arrow-up-right"></i> </a>
+          </div>
+        </div>
+        <!-- Portfol-2 -->
+        <hr class="border-secondary mb-5" />
+        <div class="row align-items-center">
+          <div class="col-md-8 order-1 order-md-2 mb-4 mb-md-0">
+            <div class="ratio ratio-4x3 overflow-hidden zoom-img-wrapper">
+              <img src="/src/img/Portfolio-2/Logofinal-usk-web.jpg" alt="USK" class="img-fluid rounded-2 object-fit-cover w-100 h-100 zoom-img" />
+            </div>
+          </div>
+
+          <div class="col-md-4 order-2 order-md-1">
+            <h2 class="text-start">Competency certification test (USK)<br />"Sikat Pancong"</h2>
+            <h6 class="text-start">Vocational final practical examination assignment by LSP</h6>
+            <p class="text-muted">16 Nov 2025</p>
+            <a href="/src/Works/USK2025.html" class="btn btn-outline-light rounded-5 px-4 d-inline-flex align-items-center gap-2 custom-btn"> ABOUT PROJECT <i class="bi bi-arrow-up-right"></i> </a>
+          </div>
+        </div>
+        <!-- Portfol-3 -->
+        <hr class="border-secondary mb-5" />
+        <div class="row align-items-center">
+          <div class="col-md-8 order-1 order-md-2 mb-4 mb-md-0">
+            <div class="ratio ratio-4x3 overflow-hidden zoom-img-wrapper">
+              <img src="/src/img/Portfolio-3/4.jpg" alt="RebrandingUMKM" class="img-fluid rounded-2 object-fit-cover w-100 h-100 zoom-img" />
+            </div>
+          </div>
+
+          <div class="col-md-4 order-2 order-md-1">
+            <h2 class="text-start">Rebranding "Bintang Klin"</h2>
+            <h6 class="text-start">Design production subject assignment project</h6>
+            <p class="text-muted">16 Nov 2024</p>
+            <a href="/src/Works/rebranding-binklin.html" class="btn btn-outline-light rounded-5 px-4 d-inline-flex align-items-center gap-2 custom-btn"> ABOUT PROJECT <i class="bi bi-arrow-up-right"></i> </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+      fetch("/src/Footer/index.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <!-- bootstrap javascript cdn link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- js Customize -->
+    <script src="/src/script.js"></script>
+  </body>
+</html>
